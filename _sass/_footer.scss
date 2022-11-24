@@ -1,33 +1,72 @@
 ﻿.footer {
-    height: 65px;
-    width: 96%;
-    padding: 10px 2%;
-    overflow: hidden;
-    position: relative;
-    z-index: 10;
+    height: 17em;
+    background: #fff;
+    padding: 2rem 0 !important;
     color: #fff;
-    background: $darkGrey;
+    text-align: center;
+    flex-wrap: wrap;
 
-    hgroup {
-		float: left;
-	}
+    @include bp(tablet) {
+        height: 10em;
+    }
 
-	h1 {
-		margin: 5px 0 0;
-	}
+    @include bp(desktop) {
+        height: 12em;
+    }
 
-	h2 {
-		font-size: 12px;
-		margin-top: 0;
-		text-transform: uppercase;
-	}
+    .footer-details {
+        color: #000;
+        padding-right: 1rem;
+        margin-top: 2rem;
 
+        @include bp(tablet) {
+            margin-top: 1.2rem;
+        }
+
+        @include bp(desktop) {
+            margin-top: 0rem;
+        }
+    }
+
+    p { 
+        margin: 0;
+    }
+    
+    img {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    li a, a { 
+        color: #fff;
+    }
+    
     li a { 
-        color: #fff; 
         transition: color 0.3s ease;
 
         &:hover {
-            color: #000;
+            color: $primaryColor;
+        }
+    }
+
+    .social-icons {
+        margin-right: 3rem;
+        margin-bottom: 0;
+        list-style-type: none;
+
+        @include bp(desktop) {
+            margin-right: 0rem;
+        }
+
+        li {
+            display: inline-block;
+            margin: 0 .5rem;
+        }
+
+        a {
+            width: 20px;
+            font-size: 20px;
+            text-align: center;
         }
     }
 }

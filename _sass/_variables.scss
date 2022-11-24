@@ -1,11 +1,17 @@
-﻿$primaryColor: #2fc7f7;
+﻿$primaryColor: #2596be;
+// $primaryBackgroundColor: rgba(0,0,0,0.3);
+$primaryBackgroundColor: #ffffff;
+
+$blueAccent: #00a3e0;
+$tangerineAccent: #ff6a39;
+$coralAccent: #da1984;
+
 $darkGrey: #475155;
 $borderColor: #eaf0f3;
 $footerColor: #9ba9af;
 $footerBorderColor: #6b757b;
 
-$royalBlue: #273f87;
-$tangerine: #dea450;
+// ----- Generic variables -----
 
 .flex-display {
 	display: -webkit-box;
@@ -37,4 +43,106 @@ $tangerine: #dea450;
 	color: #fff;
 	background-color: #337ab7;
 	border-color: #2e6da4; 
+}
+
+.left {
+	float: left;
+}
+
+.center {
+	text-align: center;
+}
+
+.clear
+{
+	overflow: hidden;
+}
+
+// ----- Color specific variables -----
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-left: 16px solid $blueAccent;
+	border-bottom: 8px solid transparent;	
+}
+
+.triangle-right-blue {
+	@extend .triangle-right;
+	border-left: 16px solid $blueAccent;
+}
+
+.triangle-right-tangerine {
+	@extend .triangle-right;
+	border-left: 16px solid $tangerineAccent;
+}
+
+.triangle-right-coral {
+	@extend .triangle-right;
+	border-left: 16px solid $coralAccent;
+}
+
+.blue-text {
+	color: $blueAccent;
+}
+
+.tangerine-text {
+	color: $tangerineAccent;
+}
+
+.coral-text {
+	color: $coralAccent;
+}
+
+.blue-bullets {
+	li {
+		display: block;
+		list-style: none; 
+		
+		/* Give the bullet room on the left hand side */
+		padding: 0;
+		position: relative;
+
+		&:before {
+			color: $blueAccent;  
+			/* color of bullet or square */
+			content: "\2022"; 
+			/* Unicode of character to precede the list item */
+			display: inline-block;
+			font-size: 1.5em; 
+			/* use em or % */ 
+			left: -.8em; 
+			/* use em, line up bullet flush with left hand side */
+			position: absolute;
+			/* Set the bullet positioned absolutely top left */
+			top: -.3em; 
+		}
+	}
+}
+
+.pink-bullets {
+	li {
+		display: block;
+		list-style: none; 
+		
+		/* Give the bullet room on the left hand side */
+		padding: 0;
+		position: relative;
+
+		&:before {
+			color: $coralAccent;  
+			/* color of bullet or square */
+			content: "\2022"; 
+			/* Unicode of character to precede the list item */
+			display: inline-block;
+			font-size: 1.5em; 
+			/* use em or % */ 
+			left: -.8em; 
+			/* use em, line up bullet flush with left hand side */
+			position: absolute;
+			/* Set the bullet positioned absolutely top left */
+			top: -.3em; 
+		}
+	}
 }

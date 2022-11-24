@@ -1,0 +1,64 @@
+.navbar {
+	min-height: 10rem;
+	padding: 1rem;
+	background: #fff;
+}
+
+.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
+	color: $primaryColor;
+	font-family: 'bebas_neue_light';
+	text-transform: uppercase;
+
+	@include bp(desktop) {
+        font-size: 2rem;
+    }
+}
+
+.navbar-brand img {
+	width: 20rem;
+
+	@include bp(tablet) {
+		width: 20rem;
+	}
+
+	@include bp(desktop) {
+		width: 20rem;
+		padding: 0rem .5rem .5rem .5rem;
+	}
+}
+
+.navbar-light .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-nav {
+	margin-top: 2rem;
+	text-align: center;
+
+	@include bp(desktop) {
+		float: right;
+	}
+}
+
+.nav-item {
+	margin: 0 1rem;
+
+	.nav-link {
+		font-size: 2rem;
+		text-decoration: none;
+
+		&:hover {
+			color: $primaryColor !important;
+			cursor: pointer;
+			text-decoration: underline;
+		}
+
+		@include bp(desktop) {
+			font-size: 1rem;
+		}
+	}
+
+	&.active {
+		text-decoration: underline;
+	}
+}	
