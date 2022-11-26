@@ -1,28 +1,36 @@
-.navbar {
-	min-height: 10rem;
-	padding: 1rem;
-	background: #fff;
-}
+.nav-header {
+	display: flex;
+	padding: 0;
 
-.navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
-	color: $primaryColor;
-	font-family: 'bebas_neue_light';
+	.nav-bar-left {
+		width: 50%;
+		text-align: center;
+		background: $primaryColor;
+	}
 
-	@include bp(desktop) {
-        font-size: 2rem;
+	.nav-bar-right {
+		width: 50%;
+		background: #fff;
+	}
+
+	h1 {
+    	margin: 1rem 0 0 0;
+    	word-wrap: break-word;
+    	color: #fff;
+    	font-size: 2.25rem;
+		font-family: 'bebas_neue_light';
+		position: relative;
+		bottom: 6rem;
+
+		@include bp(desktop) {
+	        font-size: 2.25rem;
+	    }
     }
-
-    h1 {
-    	margin: 0;
-    }
-}
-
-.navbar-brand:hover {
-	color: $primaryColor !important;
 }
 
 .navbar-brand img {
 	width: 20rem;
+	margin-top: 4rem;
 
 	@include bp(tablet) {
 		width: 20rem;
