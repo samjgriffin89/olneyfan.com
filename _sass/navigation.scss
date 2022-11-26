@@ -1,16 +1,25 @@
 .nav-header {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 0;
 
 	.nav-bar-left {
-		width: 50%;
+		width: 100%;
 		text-align: center;
 		background: $primaryColor;
+
+		@include bp(tablet) {
+	        width: 50%;
+	    }
 	}
 
 	.nav-bar-right {
-		width: 50%;
+		width: 100%;
 		background: #fff;
+
+		@include bp(tablet) {
+	        width: 50%;
+	    }
 	}
 
 	h1 {
