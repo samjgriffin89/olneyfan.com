@@ -7,11 +7,18 @@
 .navbar-light .navbar-brand, .navbar-light .navbar-nav .nav-link {
 	color: $primaryColor;
 	font-family: 'bebas_neue_light';
-	text-transform: uppercase;
 
 	@include bp(desktop) {
         font-size: 2rem;
     }
+
+    h1 {
+    	margin: 0;
+    }
+}
+
+.navbar-brand:hover {
+	color: $primaryColor !important;
 }
 
 .navbar-brand img {

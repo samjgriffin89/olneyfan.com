@@ -19,3 +19,5 @@ plugins:
 exclude:
   - .gitignore
   - README.md
+
+issues_repo: samjgriffin89/olneyfan.com

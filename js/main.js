@@ -1,3 +1,4 @@
-$(document).ready(function() {
-    $('#homepage_audio').get(0).play();
-});
+
+function play_Audio() {
+    document.getElementById("homepage_audio").play();
+}
